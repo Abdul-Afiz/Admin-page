@@ -1,0 +1,51 @@
+.sidebar {
+  @apply flex-1 border-r-[0.5px] border-[#e6e3e3] min-h-screen bg-white;
+
+  .top {
+    @apply h-14 flex items-center justify-center border-b-[0.5px] border-[#e6e3e3];
+
+    .logo {
+      @apply text-[#6439ff] font-bold text-xl;
+    }
+  }
+
+  .center {
+    @apply pl-3;
+
+    .title {
+      @apply text-xs font-bold text-[#999] mt-4 mb-1;
+    }
+
+    .section {
+      @apply flex items-center p-[0.5rem] cursor-pointer;
+
+      &:hover {
+        @apply bg-[#ece8ff];
+      }
+
+      .icon {
+        @apply text-lg text-[#7451f8];
+      }
+
+      span {
+        @apply text-sm font-[600] text-[#888] ml-3;
+      }
+    }
+  }
+
+  .bottom {
+    @apply flex items-center m-3;
+
+    .color-option {
+      @apply w-5 h-5 border-2 border-[#7461f8] rounded-md cursor-pointer m-1;
+
+      &:nth-child(1) {
+        @apply bg-[whitesmoke];
+      }
+
+      &:nth-child(2) {
+        @apply bg-[#333];
+      }
+    }
+  }
+}
