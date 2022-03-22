@@ -1,0 +1,36 @@
+.widget {
+  @apply flex flex-1 p-3 justify-between shadow-[#00000078] shadow-[2px_4px_10px_1px] rounded-[10px] h-28;
+
+  .left,
+  .right {
+    @apply flex flex-col justify-between;
+
+    .title {
+      @apply font-bold text-sm text-[#a0a0a0];
+    }
+
+    .counter {
+      @apply text-[28px] font-[300];
+    }
+
+    .link {
+      @apply text-xs border-b-[1px] border-gray-400 w-max;
+    }
+
+    .percentage {
+      @apply flex items-center text-sm;
+
+      &.positive {
+        @apply text-green-600;
+      }
+
+      &.negative {
+        @apply text-red-600;
+      }
+    }
+
+    .icon {
+      @apply text-[18px] p-[2px] rounded-[5px] self-end;
+    }
+  }
+}

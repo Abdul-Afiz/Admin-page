@@ -1,0 +1,35 @@
+.navbar {
+  @apply h-14 flex items-center border-b-[0.5px] border-[#e7e4e4] text-sm text-[#555];
+
+  .wrapper {
+    @apply flex items-center justify-between w-full p-5;
+
+    .search {
+      @apply flex items-center border-[0.5px] border-[lightgray] p-1;
+
+      input {
+        @apply border-0 outline-none bg-transparent;
+
+        &::placeholder {
+          @apply text-xs items-center;
+        }
+      }
+    }
+
+    .items {
+      @apply flex;
+
+      .item {
+        @apply flex items-center m-5 relative;
+      }
+
+      .counter {
+        @apply flex w-[15px] h-[15px] bg-red-600 rounded-[50%] text-white font-bold items-center justify-center text-[10px] leading-[7.5px] absolute top-0 right-[-3px];
+      }
+
+      .avatar {
+        @apply w-8 h-8 rounded-[50%];
+      }
+    }
+  }
+}

@@ -3,5 +3,9 @@
 
   .home-container {
     @apply flex-[6];
+
+    .widgets {
+      @apply flex p-5 gap-5;
+    }
   }
 }
