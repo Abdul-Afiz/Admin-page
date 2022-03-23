@@ -2,6 +2,8 @@ import SideBar from "../../organism/sidebar";
 import NavBar from "../../organism/navbar";
 import "./home.scss";
 import Widget from "../../organism/widget";
+import Featured from "../../organism/featured";
+import Chart from "../../organism/chart";
 
 const HomeScreen = () => {
   return (
@@ -14,6 +16,10 @@ const HomeScreen = () => {
           <Widget type="order" />
           <Widget type="earning" />
           <Widget type="balance" />
+        </div>
+        <div className="charts">
+          <Featured />
+          <Chart />
         </div>
       </div>
     </div>

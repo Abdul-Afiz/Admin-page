@@ -1,5 +1,6 @@
 .widget {
-  @apply flex flex-1 p-3 justify-between shadow-[#00000078] shadow-[2px_4px_10px_1px] rounded-[10px] h-28;
+  -webkit-box-shadow: 2px 4px 10px 1px #00000078;
+  @apply flex flex-1 p-3 justify-between shadow-[#c9c9c978] shadow-[2px_4px_10px_1px] rounded-[10px] h-28;
 
   .left,
   .right {

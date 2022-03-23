@@ -1,0 +1,56 @@
+.featured {
+  -webkit-box-shadow: 2px 4px 10px 1px #00000078;
+  @apply flex-[2] shadow-[#c9c9c978] shadow-[2px_4px_10px_1px] p-[10px];
+
+  .top {
+    @apply flex items-center justify-between text-gray-500;
+
+    .title {
+      @apply text-base font-medium;
+    }
+  }
+
+  .bottom {
+    @apply flex flex-col items-center justify-center py-5 gap-3;
+
+    .featured-chart {
+      @apply w-[100px] h-[100px];
+    }
+
+    .title {
+      @apply font-medium text-gray-500;
+    }
+
+    .amount {
+      @apply text-3xl;
+    }
+
+    .desc {
+      @apply text-xs font-light text-gray-500 text-center;
+    }
+
+    .summary {
+      @apply flex justify-between items-center w-full;
+
+      .item {
+        @apply text-center;
+      }
+
+      .item-title {
+        @apply text-sm text-gray-500;
+      }
+
+      .item-result {
+        @apply flex items-center m-2 text-sm;
+
+        &.positive {
+          @apply text-green-500;
+        }
+
+        &.negative {
+          @apply text-red-500;
+        }
+      }
+    }
+  }
+}
