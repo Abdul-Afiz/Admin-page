@@ -4,6 +4,7 @@ import "./home.scss";
 import Widget from "../../organism/widget";
 import Featured from "../../organism/featured";
 import Chart from "../../organism/chart";
+import Table from "../../organism/table";
 
 const HomeScreen = () => {
   return (
@@ -20,6 +21,10 @@ const HomeScreen = () => {
         <div className="charts">
           <Featured />
           <Chart />
+        </div>
+        <div className="list-container">
+          <div className="list-title">Latest Transaction</div>
+          <Table />
         </div>
       </div>
     </div>
