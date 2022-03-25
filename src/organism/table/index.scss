@@ -1,2 +1,8 @@
 .table {
+  .cell-wrapper {
+    @apply flex items-center;
+    .image {
+      @apply w-8 h-8 rounded-[50%] mr-3 object-cover;
+    }
+  }
 }
