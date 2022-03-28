@@ -1,3 +1,4 @@
+import DataTable from "../../organism/datatable";
 import NavBar from "../../organism/navbar";
 import SideBar from "../../organism/sidebar";
 import "./index.scss";
@@ -8,7 +9,7 @@ const ListScreen = () => {
       <SideBar />
       <div className="list-container">
         <NavBar />
-        datatable
+        <DataTable />
       </div>
     </div>
   );
