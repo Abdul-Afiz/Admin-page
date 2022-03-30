@@ -1,0 +1,56 @@
+.single {
+  @apply flex w-full;
+  .single-container {
+    @apply flex-[6];
+
+    .top {
+      @apply flex p-5 gap-5;
+      .left {
+        -webkit-box-shadow: 2px 4px 10px 1px #00000078;
+        @apply flex-1 p-5 shadow-[#c9c9c978] shadow-[2px_4px_10px_1px] relative;
+
+        .edit-btn {
+          @apply absolute top-0 right-0 p-[5px] text-xs text-[#7451f8] bg-[#7551f818] cursor-pointer rounded-bl;
+        }
+
+        .item {
+          @apply flex gap-5;
+
+          .item-img {
+            @apply w-[100px] h-[100px] rounded-[50%] object-cover;
+          }
+
+          .details {
+            .item-title {
+              @apply mb-[10px] text-[#555] text-xl;
+            }
+
+            .detail-item {
+              @apply mb-[10px] text-sm;
+
+              .item-key {
+                @apply font-bold text-gray-500 mr-[5px];
+              }
+
+              .item-value {
+                @apply font-light;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        flex: 2;
+      }
+    }
+
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px #00000078;
+      @apply flex-1 p-5 my-[10px] mx-5 shadow-[#c9c9c978] shadow-[2px_4px_10px_1px];
+    }
+
+    .title {
+      @apply text-base text-[lightgray] mb-5;
+    }
+  }
+}

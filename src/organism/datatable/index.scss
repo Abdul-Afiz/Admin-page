@@ -1,3 +1,41 @@
 .data-table {
   @apply h-[600px] p-5;
+
+  .cell-with-img {
+    @apply flex items-center;
+
+    .cell-img {
+      @apply w-8 h-8 rounded-[50%] object-cover mr-5;
+    }
+  }
+
+  .cell-with-status {
+    @apply p-[5px] rounded-[5px];
+
+    &.active {
+      @apply text-green-500 bg-[#00800019];
+    }
+
+    &.pending {
+      @apply text-[goldenrod] bg-[#ffd90022];
+    }
+
+    &.passive {
+      @apply text-[crimson] bg-[#ff000012];
+    }
+  }
+
+  .cell-action {
+    @apply flex items-center gap-4 cursor-pointer;
+
+    .view-btn {
+      @apply py-[2px] px-[5px] text-[darkblue]
+      border-dotted border-[#00008b98] border-[1px];
+    }
+
+    .delete-btn {
+      @apply py-[2px] px-[5px] text-[crimson]
+      border-dotted border-[#dc143c99] border-[1px];
+    }
+  }
 }
