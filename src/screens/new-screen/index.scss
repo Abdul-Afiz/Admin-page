@@ -8,8 +8,16 @@
       -webkit-box-shadow: 2px 4px 10px 1px #00000078;
       @apply flex p-[10px] m-5 shadow-[#c9c9c978] shadow-[2px_4px_10px_1px];
 
+      h1 {
+        @apply text-[lightgray] text-xl;
+      }
+
       .left {
-        @apply flex-1;
+        @apply flex-1 text-center;
+
+        img {
+          @apply w-[100px] rounded-[50%] object-cover;
+        }
       }
 
       .right {
