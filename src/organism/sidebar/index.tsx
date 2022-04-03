@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
   AccountCircle,
   Assessment,
@@ -18,7 +20,9 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Admin</span>
+        <Link to="/">
+          <span className="logo">Admin</span>
+        </Link>
       </div>
       <div className="center">
         <p className="title">MAIN</p>
@@ -28,12 +32,16 @@ const SideBar = () => {
         </div>
         <p className="title">LISTS</p>
         <div className="section">
-          <Person className="icon" />
-          <span>Users</span>
+          <Link to="/users">
+            <Person className="icon" />
+            <span>Users</span>
+          </Link>
         </div>
         <div className="section">
-          <Store className="icon" />
-          <span>Products</span>
+          <Link to="/products">
+            <Store className="icon" />
+            <span>Products</span>
+          </Link>
         </div>
         <div className="section">
           <Shop className="icon" />

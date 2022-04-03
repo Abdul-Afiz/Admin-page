@@ -1,9 +1,22 @@
 import { DriveFolderUpload } from "@mui/icons-material";
+import { useState } from "react";
 import NavBar from "../../organism/navbar";
 import SideBar from "../../organism/sidebar";
 import "./index.scss";
 
-const NewScreen = () => {
+type newScreenProps = {
+  inputs: Array<{
+    id?: number;
+    label?: string;
+    type?: string;
+    placeholder?: string;
+  }>;
+  title?: string;
+};
+
+const NewScreen = ({ inputs, title }: newScreenProps) => {
+  const [file, setFile] = useState<FileList | null>();
+  console.log(file);
   return (
     <div className="new">
       <SideBar />
@@ -17,7 +30,11 @@ const NewScreen = () => {
         <div className="bottom">
           <div className="left">
             <img
-              src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+              src={
+                file
+                  ? URL.createObjectURL([...file][0])
+                  : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+              }
               alt=""
             />
           </div>
@@ -27,38 +44,22 @@ const NewScreen = () => {
                 <label htmlFor="file">
                   Image: <DriveFolderUpload className="icon" />
                 </label>
-                <input type="file" id="file" className="hidden" />
+                <input
+                  type="file"
+                  id="file"
+                  onChange={({
+                    currentTarget: { files },
+                  }: React.ChangeEvent<HTMLInputElement>) => setFile(files)}
+                  className="hidden"
+                />
               </div>
+              {inputs.map((input) => (
+                <div className="form-input" key={input.id}>
+                  <label htmlFor="">{input.label}</label>
+                  <input type={input.type} placeholder={input.placeholder} />
+                </div>
+              ))}
 
-              <div className="form-input">
-                <label htmlFor="">Username</label>
-                <input type="text" placeholder="john doe" />
-              </div>
-
-              <div className="form-input">
-                <label htmlFor="">Name and surname</label>
-                <input type="text" placeholder="john doe" />
-              </div>
-              <div className="form-input">
-                <label htmlFor="">Email</label>
-                <input type="email" placeholder="johndoe@gmail.com" />
-              </div>
-              <div className="form-input">
-                <label htmlFor="">Phone</label>
-                <input type="text" placeholder="+1 234 567 89" />
-              </div>
-              <div className="form-input">
-                <label htmlFor="">Password</label>
-                <input type="password" />
-              </div>
-              <div className="form-input">
-                <label htmlFor="">Address</label>
-                <input type="text" placeholder="Elton St. 16 NewYork" />
-              </div>
-              <div className="form-input">
-                <label htmlFor="">Country</label>
-                <input type="text" placeholder="USA" />
-              </div>
               <button type="submit">Send</button>
             </form>
           </div>

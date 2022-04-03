@@ -13,15 +13,41 @@
       }
 
       .left {
-        @apply flex-1 text-center;
+        @apply flex flex-1 justify-center;
 
         img {
-          @apply w-[100px] rounded-[50%] object-cover;
+          @apply w-[100px] h-[100px] rounded-[50%] object-cover;
         }
       }
 
       .right {
         @apply flex-[2];
+
+        form {
+          @apply flex flex-wrap gap-5 justify-around;
+
+          .form-input {
+            @apply w-[40%];
+
+            label {
+              @apply flex items-center gap-2;
+
+              .icon {
+                @apply cursor-pointer;
+              }
+            }
+
+            input {
+              @apply w-full outline-none border-b 
+              border-gray-300;
+            }
+          }
+
+          button {
+            @apply w-[150px] p-[10px] font-bold cursor-pointer
+            m-2 bg-teal-500 text-white;
+          }
+        }
       }
     }
   }
