@@ -15,8 +15,11 @@ import {
   Store,
 } from "@mui/icons-material";
 import "./index.scss";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkmode-context";
 
 const SideBar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="top">
@@ -84,8 +87,14 @@ const SideBar = () => {
         </div>
       </div>
       <div className="bottom">
-        <div className="color-option"></div>
-        <div className="color-option"></div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        ></div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: "DARK" })}
+        ></div>
       </div>
     </div>
   );

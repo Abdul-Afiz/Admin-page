@@ -1,8 +1,8 @@
 .data-table {
-  @apply h-[600px] p-5;
+  @apply h-[600px] px-5 py-2;
 
   .data-table-title {
-    @apply w-full text-2xl text-gray-400 mb-2 flex items-center justify-between;
+    @apply w-full text-lg text-gray-400 mb-2 flex items-center justify-between;
 
     .link {
       @apply text-green-600 text-base font-normal border-green-600 border-[1px] p-[5px] rounded-[5px];

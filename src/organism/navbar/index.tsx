@@ -7,10 +7,13 @@ import {
   Notifications,
   Search,
 } from "@mui/icons-material";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkmode-context";
 
 import "./index.scss";
 
 const NavBar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -24,7 +27,10 @@ const NavBar = () => {
             <Language className="icon" />
           </div>
           <div className="item">
-            <DarkMode className="icon" />
+            <DarkMode
+              className="icon"
+              onClick={() => dispatch({ type: "TOGGLE" })}
+            />
           </div>
           <div className="item">
             <Fullscreen className="icon" />

@@ -13,6 +13,7 @@
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.2",
     "@mui/x-data-grid": "^5.7.0",
+    "@types/node": "^17.0.23",
     "init": "^0.1.2",
     "react": "^17.0.2",
     "react-circular-progressbar": "^2.0.4",

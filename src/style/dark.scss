@@ -13,6 +13,48 @@
   }
 
   .navbar {
-    @apply text-[#999] bg-[#333];
+    @apply text-[#999] bg-[#111] border-[#333];
+    .search {
+      @apply border-[#999];
+    }
+  }
+
+  .sidebar {
+    @apply bg-[#111] border-[#333];
+    .top {
+      @apply border-[#333];
+
+      .logo {
+        @apply text-[#999];
+      }
+    }
+
+    .center {
+      .section {
+        &:hover {
+          @apply bg-[#333];
+        }
+
+        .icon {
+          @apply text-[#999];
+        }
+      }
+    }
+  }
+
+  .data-table {
+    .data-grid {
+      @apply text-[gray] border-none;
+
+      .view-btn,
+      .delete-btn,
+      .cell-with-status {
+        @apply text-[gray] border-none;
+      }
+    }
+  }
+
+  input {
+    @apply bg-transparent;
   }
 }
