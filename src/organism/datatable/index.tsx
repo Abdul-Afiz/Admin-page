@@ -41,7 +41,7 @@ const DataTable = () => {
     <div className="data-table">
       <div className="data-table-title">
         Add New User
-        <Link to="/users/new" className="link">
+        <Link to="new" className="link">
           Add New
         </Link>
       </div>

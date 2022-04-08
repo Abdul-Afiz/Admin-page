@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { DarkModeContext } from "./context/darkmode-context";
 import { productInputs, userInputs } from "./formSource";
+
 import LoginScreen from "./screens/auth-screen/login-screen";
 import HomeScreen from "./screens/home-screen";
 import ListScreen from "./screens/list-screen";
@@ -20,7 +21,7 @@ function App() {
           <Route path="/">
             <Route index element={<HomeScreen />} />
             <Route path="login" element={<LoginScreen />} />
-            <Route path="users">
+            <Route path="/users">
               <Route index element={<ListScreen />} />
               <Route path=":userId" element={<SingleScreen />} />
               <Route
@@ -28,7 +29,7 @@ function App() {
                 element={<NewScreen inputs={userInputs} title="Add New User" />}
               />
             </Route>
-            <Route path="products">
+            <Route path="/products">
               <Route index element={<ListScreen />} />
               <Route path=":productId" element={<SingleScreen />} />
               <Route

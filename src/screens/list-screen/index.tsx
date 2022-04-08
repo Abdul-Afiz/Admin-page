@@ -1,17 +1,13 @@
 import DataTable from "../../organism/datatable";
-import NavBar from "../../organism/navbar";
-import SideBar from "../../organism/sidebar";
+import ScreenTemplate from "../../organism/screen template";
+
 import "./index.scss";
 
 const ListScreen = () => {
   return (
-    <div className="list">
-      <SideBar />
-      <div className="list-container">
-        <NavBar />
-        <DataTable />
-      </div>
-    </div>
+    <ScreenTemplate>
+      <DataTable />
+    </ScreenTemplate>
   );
 };
 

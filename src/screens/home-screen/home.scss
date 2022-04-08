@@ -2,7 +2,7 @@
   @apply flex;
 
   .home-container {
-    @apply flex-[6];
+    @apply flex-[6] pb-5;
 
     .widgets,
     .charts {

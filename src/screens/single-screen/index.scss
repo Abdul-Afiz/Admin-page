@@ -1,7 +1,7 @@
 .single {
   @apply flex w-full;
   .single-container {
-    @apply flex-[6];
+    @apply flex-[6] pb-8;
 
     .top {
       @apply flex p-5 gap-5;

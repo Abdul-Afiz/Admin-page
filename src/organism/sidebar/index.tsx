@@ -21,7 +21,7 @@ import { DarkModeContext } from "../../context/darkmode-context";
 const SideBar = () => {
   const { dispatch } = useContext(DarkModeContext);
   return (
-    <div className="sidebar">
+    <aside className="sidebar">
       <div className="top">
         <Link to="/">
           <span className="logo">Admin</span>
@@ -96,7 +96,7 @@ const SideBar = () => {
           onClick={() => dispatch({ type: "DARK" })}
         ></div>
       </div>
-    </div>
+    </aside>
   );
 };
 
